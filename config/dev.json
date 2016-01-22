@@ -1,0 +1,4 @@
+{
+    "SITE_URL": "http://dev.yoursite.com",
+    "API_URL": "http://api-dev.yoursite.com"
+}

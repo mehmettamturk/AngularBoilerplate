@@ -1,0 +1,10 @@
+{
+    "preset": "google",
+    "validateIndentation": 4,
+    "jsDoc": {
+        "checkAnnotations": "closurecompiler"
+    },
+    "disallowMultipleLineBreaks": null,
+    "disallowMultipleVarDecl": null,
+    "requireCurlyBraces": null
+}

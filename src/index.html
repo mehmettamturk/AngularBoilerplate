@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js" data-ng-app="App"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js" data-ng-app="App"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <title data-ng-bind="$state.current.data.pageTitle + ' | ' + config.meta.title"></title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta name="description" content="{{config.meta.description}}"/>
+    <meta name="keywords" content="{{config.meta.keywords}}"/>
+    <meta name="author" content="Mehmet Tamtürk"/>
+    <meta name="content-language" content="tr"/>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{config.meta.share.site}}">
+    <meta name="twitter:title" content="{{config.meta.share.title}}">
+    <meta name="twitter:creator" content="@<twitter_account>">
+    <meta name="twitter:image" content="{{config.meta.share.image}}">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{config.meta.share.title}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{config.meta.share.site}}" />
+    <meta property="og:image" content="{{config.meta.share.image}}" />
+    <meta property="og:description" content="{{config.meta.share.description}}" />
+    <meta property="og:site_name" content="{{config.meta.title}}" />
+
+    <!-- inject:css -->
+    <!-- endinject -->
+
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <base href="/">
+</head>
+
+<body>
+    <menu></menu>
+    <div ui-view></div>
+    <footer></footer>
+
+    <!-- inject:js -->
+    <!-- endinject -->
+
+    <script>
+        angular.element(document).ready(function() {
+            angular.bootstrap(document, ['App']);
+        });
+    </script>
+
+    <!--<script src="http://www.google.com/uds/api?file=uds.js&v=1.0&key=<your_google_search_key>" type="text/javascript"></script>-->
+
+    <!--<script language="Javascript" type="text/javascript">-->
+        <!--var siteSearch = new GwebSearch();-->
+        <!--siteSearch.setUserDefinedLabel("YourWebsite");-->
+        <!--siteSearch.setUserDefinedClassSuffix("siteSearch");-->
+        <!--siteSearch.setSiteRestriction("yourwebsite.com");-->
+        <!--searchControl.addSearcher(siteSearch);-->
+    <!--</script>-->
+
+    <!--<div id="search-box"></div>-->
+
+</body>
+</html>
