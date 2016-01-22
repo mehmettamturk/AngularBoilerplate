@@ -14,7 +14,7 @@
     HomepageController.$inject = [
         '$rootScope',
         '$scope',
-        'Projects',
+        'Items',
         'config'
     ];
 
@@ -22,7 +22,7 @@
     /**
      * Dashboard controller.
      */
-    function HomepageController($rootScope, $scope, Projects, config) {
+    function HomepageController($rootScope, $scope, Items, config) {
         $scope.projects = {};
         $scope.limit = 10;
         $scope.page = 0;
@@ -45,11 +45,11 @@
                 skip: $scope.limit * $scope.page
             };
 
-            Projects.query(query, function(data) {
+            Items.query(query, function(data) {
                 if (isAppend)
-                    $scope.projects['rows'] = $scope.projects['rows'].concat(data['rows']);
+                    $scope.items['rows'] = $scope.projects['rows'].concat(data['rows']);
                 else
-                    $scope.projects = data;
+                    $scope.items = data;
             });
         };
 
